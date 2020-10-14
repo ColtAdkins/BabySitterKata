@@ -8,8 +8,10 @@ import com.baby.Babysitter;
 
 public class BabysitterTest {
 
+	//Instantiate Babysitter class
 	Babysitter b = new Babysitter();
 	
+	//Calculates pay for 5 hours, asserts that it equals $60
 	@Test
 	public void calculatePayForFiveHours() {
 		b.setBeginDay(13);
@@ -19,6 +21,7 @@ public class BabysitterTest {
 		int pay = b.calculatePay(b.getHourBegan(), b.getHourEnd());
 		assertEquals(60, pay);
 	}
+	//Calculates pay for 11 hours, asserts that it equals $140
 	@Test
 	public void calculatePayForElevenHours() {
 		b.setBeginDay(13);
@@ -28,6 +31,7 @@ public class BabysitterTest {
 		int pay = b.calculatePay(b.getHourBegan(), b.getHourEnd());
 		assertEquals(140, pay);
 	}
+	//Calculates pay for 4 hours, asserts that it equals $64
 	@Test
 	public void calculatePayForMidnightShift() {
 		b.setBeginDay(14);
@@ -37,6 +41,7 @@ public class BabysitterTest {
 		int pay = b.calculatePay(b.getHourBegan(), b.getHourEnd());
 		assertEquals(64, pay);
 	}
+	//Calculates pay for 1 hour, asserts that it equals $16
 	@Test
 	public void calculatePayForOneHourThreeToFour() {
 		b.setBeginDay(14);
@@ -46,6 +51,7 @@ public class BabysitterTest {
 		int pay = b.calculatePay(b.getHourBegan(), b.getHourEnd());
 		assertEquals(16, pay);
 	}
+	//Calculates pay for 6 hours, asserts that it equals $80
 	@Test
 	public void calculatePayFromBedtimeToFour() {
 		b.setBeginDay(13);
